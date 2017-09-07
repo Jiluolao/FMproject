@@ -1,0 +1,25 @@
+为什么html文件
+<style>
+	*{
+  	margin: 0;
+  	padding: 0;
+	}
+
+	body{
+  	background: url("images/gg.jpg") no-repeat;
+	}
+</style>
+中引入background:url("images/bgtop.jpg");   可以，没有出错，
+引入css文件<link rel="stylesheet" href="css/index.css">之后，css中写的是
+ *{
+   margin: 0;
+   padding: 0;
+ }
+ body{
+   background: url("images/gg.jpg") no-repeat;
+ }
+结果不一样？？？？为什么
+
+答案：css的路径与images的路径问题
+	index.css的路径是在css文件夹 gg.jpg这个图片文件是在images文件夹中，所有index.css文件要引入gg.jpg文件要用到相对路径
+	即background:url("../images/gg.jpg");
